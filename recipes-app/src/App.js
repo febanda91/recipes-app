@@ -1,15 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-       <h1>Hello World</h1>
-      </div>
-    );
-  }
+const App = () => {
+
+  const APP_ID = "9ad3b61d"
+  const APP_KEY = "200e686d3a298a1e3ccd0d702fdc6c4a"
+
+
+  const exampleReq =  `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`
+
+  return(
+    <div className="App">
+      <form className="search-form">
+        <input className="search-bar"type="text"></input>
+        <button className="search-button"type="submit">Search</button>
+      </form>
+    </div>
+  )
 }
 
 export default App;
