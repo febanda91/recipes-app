@@ -1,10 +1,10 @@
 import React from "react"
-import style from "./recipe.module.css"
+import styles from "./myName.module.css"
 
 
 const Recipe = ({title, calories, image, ingredients}) => {
     return(
-        <div className={style.recipe}>
+        <div className={styles.recipe}>
             <h1>{title}</h1>
             <ol>
                 {ingredients.map(ingredient => (
@@ -12,7 +12,7 @@ const Recipe = ({title, calories, image, ingredients}) => {
                 ))}
             </ol>
             <p>{calories}</p>
-            <img src={image} alt=""></img>
+            <img className={styles.image}src={image} alt=""></img>
 
         </div>
     )
