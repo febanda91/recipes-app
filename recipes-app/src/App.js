@@ -33,6 +33,7 @@ const App = () => {
   const getSearch = e => {
     e.preventDefault()
     setQuery(search)
+    setSearch('')
   }
 
 
@@ -44,10 +45,14 @@ const App = () => {
         <button
         className="search-button"type="submit">Search</button>
       </form>
+      <div className="recipes">
       {recipes.map(recipe => (
         <Recipe title={recipe.recipe.label} calories={recipe.recipe.calories}
-        image={recipe.recipe.image} key={recipe.recipe.label}/>
+        image={recipe.recipe.image} key={recipe.recipe.label}
+        ingredients={recipe.recipe.ingredients}
+        />
       ))}
+      </div>
     </div>
   )
 }
