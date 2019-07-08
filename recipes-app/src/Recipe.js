@@ -1,10 +1,11 @@
 import React from "react"
-import styles from "./myName.module.css"
 import './App.css';
+
 
 
 const Recipe = ({title, calories, image, ingredients}) => {
     return(
+           
         <div className="recipe">
             <h1>{title}</h1>
             <ol>
@@ -12,7 +13,8 @@ const Recipe = ({title, calories, image, ingredients}) => {
                     <li>{ingredient.text}</li>
                 ))}
             </ol>
-            <p>{calories}</p>
+            <p>Calories: {Math.round(calories)}</p>
+                        
             <img className="image"src={image} alt=""></img>
 
         </div>
